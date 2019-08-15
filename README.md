@@ -5,8 +5,8 @@ Java.  This goal is to have a feature complete implementation that is within
 10% of the performance of the C++ original and produces byte-for-byte exact
 copies of the C++ code.
 
-This fork of the orignal java rewrite of leveldb(  ) has been modified 
-to make leveldb work for the hadoop timeline server that uses 
+This fork of the orignal java rewrite of leveldb ( https://github.com/dain/leveldb ) 
+has been modified to make leveldb work for the hadoop timeline server that uses 
 ```org.fusesource.leveldbjni.JniDBFactory``` class as an entry point to leveldb
 on arm7 32 bit architecture (Eg: Raspberry Pi). The main goal of this fork was to
 provide an alternative to leveldbjni in arm7 32 bit platforms for which 
