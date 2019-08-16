@@ -55,12 +55,12 @@ public class JniDBFactory implements DBFactory
 
     public void destroy(File path, Options options) throws IOException
     {
-        //do nothing
+        Iq80DBFactory.factory.destroy(path, options);
     }
 
     public void repair(File path, Options options) throws IOException
     {
-        //do nothing
+        //TODO: Yet to be implemented
     }
 
     @Override
