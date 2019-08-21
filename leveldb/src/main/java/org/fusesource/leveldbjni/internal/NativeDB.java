@@ -17,11 +17,7 @@
  */
 package org.fusesource.leveldbjni.internal;
 
-import java.io.File;
-import java.io.IOException;
-
 public class NativeDB {
-
     public static class DBException extends IOException {
         private final boolean notFound;
 
