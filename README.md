@@ -1,4 +1,4 @@
-# LevelDB in Java
+# LevelDB in Java for Apache Hadoop
 
 This is a rewrite (port) of [LevelDB](http://code.google.com/p/leveldb/) in
 Java.  This goal is to have a feature complete implementation that is within
@@ -12,6 +12,13 @@ on arm7 32 bit architecture (Eg: Raspberry Pi). The main goal of this fork was t
 provide an alternative to leveldbjni in arm7 32 bit platforms for which 
 the leveldbjni library has no support yet.
 
+# Hadoop Integration: Instructions to replace leveldbjni library in Hadoop for armhf and arm7 architecture support.
+- Clone the git and build with mvn
+    `git clone https://github.com/Pradeep39/leveldb.git`
+    `mvn clean package -DskipTests=true -Dmaven.javadoc.skip=true`
+- Remove leveldbjni-all-1.8.jar from `$YARN_HOME/share/hadoop/hdfs/lib`
+- Copy `levedb/leveldb-api/target/leveldb-api-0.13-SNAPSHOT.jar` to `$YARN_HOME/share/hadoop/hdfs/lib`
+- Copy `leveldb/leveldb/target/leveldb-0.13-SNAPSHOT-uber.jar` to `$YARN_HOME/share/hadoop/hdfs/lib`
 
 # Current status
 
