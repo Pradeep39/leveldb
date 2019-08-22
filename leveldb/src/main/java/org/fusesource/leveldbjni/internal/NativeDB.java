@@ -16,19 +16,22 @@
  * limitations under the License.
  */
 package org.fusesource.leveldbjni.internal;
-
-public class NativeDB {
-    public static class DBException extends IOException {
+import java.io.IOException;
+public class NativeDB
+{
+    public static class DBException extends IOException
+    {
         private final boolean notFound;
 
-        DBException(String s, boolean notFound) {
+        DBException(String s, boolean notFound)
+        {
             super(s);
             this.notFound = notFound;
         }
 
-        public boolean isNotFound() {
+        public boolean isNotFound()
+        {
             return notFound;
         }
     }
-
 }
